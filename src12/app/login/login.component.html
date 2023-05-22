@@ -1,0 +1,13 @@
+<p>login works!</p>
+<form (ngSubmit)="logIn()">
+    <label for="email">email:</label>
+    <input type="text" id="email" name="email" [(ngModel)]="email" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" required>
+
+    <button type="submit">Login</button>
+</form>
+  <div *ngIf="loggedIn">
+    <app-home></app-home>
+  </div>
